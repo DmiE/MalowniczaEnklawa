@@ -717,35 +717,6 @@ button {
   }
 }
 
-.map__legend-bagryhouse {
-  margin-bottom: 30px;
-  position: relative;
-  padding-left: 70px;
-  margin-top: 40px;
-
-  &:before {
-    content: '';
-    height: 56px;
-    width: 56px;
-    display: inline-block;
-    background-image: url('./assets/logo-map-list.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: 0;
-    top: -17px;
-  }
-}
-
-.map__legend-line {
-  height: 21px;
-  width: 86px;
-  border: 0;
-  border-top: 21px solid #5ce1e6;
-  margin-left: 0;
-}
-
 .gallery__section {
   display: flex;
   flex-direction: column;
