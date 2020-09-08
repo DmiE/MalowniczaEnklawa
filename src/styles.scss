@@ -56,6 +56,11 @@ html {
   margin: 0;
 }
 
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 35px;
@@ -114,7 +119,7 @@ a {
   cursor: pointer;
 
   &:hover {
-    color: #002349;
+    color: $navy-blue;
   }
 }
 
@@ -126,7 +131,7 @@ a {
 }
 
 .text__highlighted {
-  color: #002349;
+  color: $navy-blue;
 }
 
 header {
@@ -143,7 +148,8 @@ header {
 }
 
 .header__scrolled {
-  background-color: #002349;
+  background-color: $navy-blue;
+  border-bottom: 1px solid $gold;
 }
 
 body {
@@ -154,6 +160,33 @@ body {
 
 .scroll__block {
   overflow: hidden;
+}
+
+.logo {
+  height: 52px;
+  fill: #fff;
+  transition: fill 0.3s;
+}
+
+.logo__mobile {
+  height: 40px;
+
+  &:hover {
+    .logo {
+      fill: $gold;
+    }
+  }
+}
+
+.logo__link {
+  display: block;
+  margin-top: 7px;
+
+  &:hover {
+    .logo {
+      fill: $gold;
+    }
+  }
 }
 
 .container {
@@ -670,12 +703,12 @@ button {
     }
 
     &:hover {
-      background-color: rgba(153, 130, 93, 0.3);
+      background-color: rgba(0, 35, 73, 0.1);
     }
 
     &.main-table__highlighted {
       &:hover {
-        background-color: rgba(92, 225, 230, 0.2);
+        background-color: rgba(0, 35, 73, 0.2);
       }
     }
   }
