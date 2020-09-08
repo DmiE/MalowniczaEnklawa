@@ -9,7 +9,10 @@
       content="Malownicza Enklawa to prywatna enklawa 5 domów jednorodzinnych znajdujących w najbardziej malowniczym zakątku Woli Justowskiej w Krakowie"
     />
     <title>Malownicza Enklawa</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.scss" />
     <!-- <link rel="shortcut icon" type="image/png" href="./assets/favi.png" /> -->
   </head>
@@ -27,7 +30,7 @@
         <li class="navigation__item"><a href="#map__section">LOKALIZACJA</a></li>
         <li class="navigation__item"><a href="#contact__section">KONTAKT</a></li>
         <li class="navigation__item navigation__social-icon">
-          <a href="" target="_blank" rel="noopener"><img src="./assets/facebook-white.png" alt="facebook logo" /></a>
+          <a href="" target="_blank" rel="noopener"><img src="./assets/facebook-white.png" alt="facebook logo"/></a>
         </li>
       </ul>
       <button id="nav-icon4" class="navigation__hamburger">
@@ -40,7 +43,7 @@
   <nav id="mobile-navigation" class="mobile-navigation">
     <ul class="mobile-navigation__list">
       <li class="mobile-navigation__item">
-        <a href="#jumbotron__section"><img class="navigation__item-logo" src="" alt="logo" /></a>
+        <a href="#jumbotron__section"><img class="navigation__item-logo" src="" alt="logo"/></a>
       </li>
       <li class="mobile-navigation__item"><a href="#film__section">O INWESTYCJI</a></li>
       <li class="mobile-navigation__item"><a href="#image-map__section">WYBÓR DOMÓW</a></li>
@@ -51,7 +54,7 @@
     </ul>
     <ul class="mobile-navigation__social-list">
       <li class="mobile-navigation__social-item">
-        <a href="" target="_blank" rel="noopener"><img src="./assets/facebook.png" alt="facebook logo" /></a>
+        <a href="" target="_blank" rel="noopener"><img src="./assets/facebook.png" alt="facebook logo"/></a>
       </li>
     </ul>
   </nav>
@@ -98,87 +101,96 @@
         </a>
       </div>
     </section>
-    <a class="scroll__anchor" id="film__section"></a>
-    <!-- <section class="film__section container">
-      <h2 class="film__section-title">FILM</h2>
-      <div class="film__container">
-        <div class="movie__play-button">
-          <a data-fancybox data-width="1920" data-height="1080" href="https://vimeo.com/377748219"
-            ><img src="./assets/playbutton.png" alt="przycisk play"
-          /></a>
-        </div>
-      </div>
-    </section>
+
     <a class="scroll__anchor" id="description__section"></a>
-    <section class="description__section container">
-      <div class="description__container description__container_top">
-        <div class="description__container_top-left" data-aos="fade-right">
-          <h2>SPEŁNIJ MARZENIA</h2>
-          <img src="./assets/waves.png" alt="grafika przedstawiająca niebieskie fale" />
-          <p>
-            Poranek z kubkiem gorącej kawy spędzony na tarasie, z którego roztacza się piękny widok na pływające
-            żaglówki. Wieczorny spacer brzegiem zalewu po długim dniu pracy. Przyjęcie urodzinowe Twojego dziecka
-            spędzone w gronie najbliższych we własnym ogrodzie.
-          </p>
-          <p>
-            Spełnij swoje marzenia i stań się właścicielem jednego z wyjątkowych domów w
-            <span class="text_bolded"><strong></strong></span> już dziś.
-          </p>
-        </div>
-        <div class="description__container_top-right" data-aos="fade-left">
-          <img src="./assets/wizualization1.jpg" alt="Wizualizacja osiedla" />
-        </div>
+    <section class="description__section">
+      <div class="title_container container shadow_container">
+        <h2 class="title">O Inwestycji</h2>
+      </div>
+      <div class="description__text_container container shadow_container">
+        <p class="description__text">
+          W najbardziej malowniczym zakątku Woli Justowskiej powstaje osiedle 5 domów jednorodzinnych. Domy położone są
+          na wzgórzu z pięknymi widokami na Kraków oraz okolicę. Dookoła zgodnie z obowiązującym planem zagospodarowania
+          zieleń niezorganizowana. Domy wybudowane są z najlepszych dostępnych na rynku materiałów. W dwóch domach
+          opcjonalnie (do decyzji Nabywców) baseny a w pozostałych jacuzzi.
+        </p>
+        <p class="description__text">Podstawowe wyposażenie to m.in.:</p>
+        <ul class="description__list">
+          <li class="description__list_item">rekuperację Thessla,</li>
+          <li class="description__list_item">klimatyzację,</li>
+          <li class="description__list_item">rolety zewnętrzne w oknach,</li>
+          <li class="description__list_item">okna z pakietami 3 – szybowymi,</li>
+          <li class="description__list_item">centralny odkurzacz,</li>
+          <li class="description__list_item">stację uzdatniania wody,</li>
+          <li class="description__list_item">ogrzewanie podłogowe gazowe w całym domu, w garażu grzejnik panelowy,</li>
+          <li class="description__list_item">system alarmowy,</li>
+          <li class="description__list_item">monitoring z nagrywaniem,</li>
+          <li class="description__list_item">videodomofon na każdym piętrze</li>
+        </ul>
       </div>
     </section>
     <a class="scroll__anchor" id="map__section"></a>
-    <section class="map__section container map__slider">
-      <div class="map__slider-item">
-        <div class="map__description-container">
-          <div class="map__description-container__left">
-            <img src="./assets/family.jpg" alt="zdjęcie szczęśliwej rodziny spędzającej czas nad jeziorem" />
-          </div>
-          <div class="map__description-container__right">
-            <h2>IDEALNE MIEJSCE DLA TWOJEJ RODZINY</h2>
-            <img src="./assets/waves.png" alt="grafika przedstawiająca niebieskie fale" />
-            <p>
-              Wszystko to, co do tej pory wydawało się być niemożliwym w mieście - jest w zasięgu Twojej ręki. Liczne
-              alejki spacerowe, przystań żeglarska z wypożyczalnią sprzętu wodnego, rozbudowane place zabaw dla dzieci,
-              boiska, plaża z kąpieliskiem oraz bliskość popularnych sklepów sprawiają, że komfortowo się tutaj mieszka
-              i wypoczywa. Wszystko w lokalizacji oddalonej zaledwie o kwadrans drogi komunikacją miejską lub samochodem
-              od Starego Miasta.
-            </p>
-            <p class="text_bolded">Wybierz idealne miejsce dla siebie i swojej rodziny.</p>
-          </div>
-        </div>
+    <section class="table__section container">
+      <div class="title_container container shadow_container">
+        <h2 class="title">Wybór domu</h2>
       </div>
-      <div class="map__slider-item">
-        <div class="map__map-and-legend">
-          <div class="map__container">
-            <img class="map" src="./assets/.png" alt="Mapa okolic inwestycji" />
-          </div>
-          <div class="map__legend-container">
-            <h2>LEGENDA</h2>
-            <hr class="map__legend-line" />
-            <ul class="map__legend-list">
-              <li class="map__legend-item map__legend-">- TEREN INWESTYCJI</li>
-              <li class="map__legend-item"><span class="map__legend-number">1</span> - PARK MIEJSKI WIELKIE</li>
-              <li class="map__legend-item"><span class="map__legend-number">2</span> - PLAC ZABAW I SIŁOWNIA</li>
-              <li class="map__legend-item"><span class="map__legend-number">3</span> - PLAŻA</li>
-              <li class="map__legend-item"><span class="map__legend-number">4</span> - PRZYSTAŃ I KLUB ŻEGLARSKI</li>
-              <li class="map__legend-item"><span class="map__legend-number">5</span> - PRZYSTANEK AUTOBUSOWY</li>
-              <li class="map__legend-item">
-                <span class="map__legend-number">6 </span> - SZKOŁA I PRZEDSZKOLE SAMORZADOWE
-              </li>
-              <li class="map__legend-item"><span class="map__legend-number">7/8</span> - DYSKONT SPOŻYWCZY</li>
-              <li class="map__legend-item">
-                <span class="map__legend-number">9</span> - PRZYSTANEK TRAMWAJOWY I AUTOBUSOWY
-              </li>
-              <li class="map__legend-item"><span class="map__legend-number">10</span> - STACJA BENZYNOWA</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <table class="main-table">
+        <thead>
+          <tr class="main-table__header">
+            <th>Dom</th>
+            <th>Powierzchnia domu z garażem</th>
+            <th>Powierzchnia zabudowy</th>
+            <th>Powierzchnia ogrodu</th>
+            <th>Status</th>
+            <th>Rzut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A1</td>
+            <td>297 m2</td>
+            <td>124 m2</td>
+            <td>730 m2</td>
+            <td>Wolny</td>
+            <td><a href="" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td>A2</td>
+            <td>297 m2</td>
+            <td>124 m2</td>
+            <td>600 m2</td>
+            <td>Wolny</td>
+            <td><a href="" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td>A3</td>
+            <td>297 m2</td>
+            <td>124 m2</td>
+            <td>580 m2</td>
+            <td>Wolny</td>
+            <td><a href="" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td>B1</td>
+            <td>356 m2</td>
+            <td>147 m2</td>
+            <td>730 m2</td>
+            <td>Wolny</td>
+            <td><a href="" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td>B2</td>
+            <td>356 m2</td>
+            <td>147 m2</td>
+            <td>580 m2</td>
+            <td>Wolny</td>
+            <td><a href="" target="_blank">PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
+
+    <!--
     <a class="scroll__anchor" id="info__section"></a>
     <section class="info__section container">
       <div class="info__ext-container">
