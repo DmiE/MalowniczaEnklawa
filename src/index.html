@@ -205,7 +205,7 @@
       <div class="title_container container shadow_container">
         <h2 class="title">Wybór domu</h2>
       </div>
-      <div class="map_container">
+      <div class="image_map_container container shadow_container">
         <svg
           version="1.1"
           id="Warstwa_1"
@@ -213,45 +213,11 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
           y="0px"
-          width="1080px"
-          height="643.677px"
           viewBox="0 0 1080 643.677"
           enable-background="new 0 0 1080 643.677"
           xml:space="preserve"
+          class="image_map"
         >
-          <polygon
-            opacity="0.3"
-            fill="#FFFFFF"
-            points="144.192,58.427 273.211,58.427 273.211,103.109 322.641,103.109 322.641,198.337 
-	214.287,198.337 214.287,212.58 144.192,212.58 144.192,158.682 128.833,158.682 128.833,117.351 144.192,117.351 "
-          />
-          <polygon
-            opacity="0.3"
-            fill="#FFFFFF"
-            points="492.581,58.427 622.061,58.427 622.061,103.269 671.666,103.269 671.666,198.836 
-	562.926,198.836 562.926,213.13 492.581,213.13 492.581,159.04 477.166,159.04 477.166,117.562 492.581,117.562 "
-          />
-          <polygon
-            opacity="0.3"
-            fill="#FFFFFF"
-            points="256,533.549 267.549,533.549 267.549,586.823 354.353,586.823 354.353,556.834 
-	433.334,556.834 433.334,468.166 379.873,468.166 379.873,448.607 329.579,448.607 329.393,435.01 267.549,435.01 267.548,492.382 
-	256,492.382 "
-          />
-          <polygon
-            opacity="0.3"
-            fill="#FFFFFF"
-            points="593.667,533.446 605.322,533.446 605.322,587.207 692.917,587.207 692.917,556.943 
-	772.618,556.943 772.618,467.468 718.67,467.468 718.67,447.73 667.917,447.73 667.729,434.01 605.322,434.01 605.322,491.905 
-	593.667,491.905 "
-          />
-          <polygon
-            opacity="0.3"
-            fill="#FFFFFF"
-            points="799.333,114.441 810.971,114.441 810.971,60.764 898.43,60.764 898.43,90.98 
-	978.008,90.98 978.008,180.317 924.142,180.317 924.142,200.023 873.468,200.023 873.281,213.724 810.971,213.724 810.971,155.918 
-	799.333,155.918 "
-          />
           <image
             overflow="visible"
             width="1349"
@@ -259,9 +225,66 @@
             xlink:href="./assets/map.png"
             transform="matrix(0.8006 0 0 0.8006 -4.882813e-004 0)"
           ></image>
+          <a xlink:href="./assets/map.png" target="_blank">
+            <polygon
+              opacity="0.1"
+              class="image_map__item"
+              data-house-number="B1"
+              fill="#FFFFFF"
+              points="144.192,58.427 273.211,58.427 273.211,103.109 322.641,103.109 322.641,198.337 
+214.287,198.337 214.287,212.58 144.192,212.58 144.192,158.682 128.833,158.682 128.833,117.351 144.192,117.351 "
+            />
+          </a>
+          <a xlink:href="./assets/map.png" target="_blank">
+            <polygon
+              opacity="0.1"
+              class="image_map__item"
+              data-house-number="B2"
+              fill="#FFFFFF"
+              points="492.581,58.427 622.061,58.427 622.061,103.269 671.666,103.269 671.666,198.836 
+	562.926,198.836 562.926,213.13 492.581,213.13 492.581,159.04 477.166,159.04 477.166,117.562 492.581,117.562 "
+            />
+          </a>
+          <a xlink:href="./assets/map.png" target="_blank">
+            <polygon
+              opacity="0.1"
+              class="image_map__item"
+              data-house-number="A1"
+              fill="#FFFFFF"
+              points="256,533.549 267.549,533.549 267.549,586.823 354.353,586.823 354.353,556.834 
+	433.334,556.834 433.334,468.166 379.873,468.166 379.873,448.607 329.579,448.607 329.393,435.01 267.549,435.01 267.548,492.382 
+	256,492.382 "
+            />
+          </a>
+          <a xlink:href="./assets/map.png" target="_blank">
+            <polygon
+              opacity="0.1"
+              class="image_map__item"
+              data-house-number="A2"
+              fill="#FFFFFF"
+              points="593.667,533.446 605.322,533.446 605.322,587.207 692.917,587.207 692.917,556.943 
+	772.618,556.943 772.618,467.468 718.67,467.468 718.67,447.73 667.917,447.73 667.729,434.01 605.322,434.01 605.322,491.905 
+	593.667,491.905 "
+            />
+          </a>
+          <a xlink:href="./assets/map.png" target="_blank">
+            <polygon
+              opacity="0.1"
+              class="image_map__item"
+              data-house-number="A3"
+              fill="#FFFFFF"
+              points="799.333,114.441 810.971,114.441 810.971,60.764 898.43,60.764 898.43,90.98 
+	978.008,90.98 978.008,180.317 924.142,180.317 924.142,200.023 873.468,200.023 873.281,213.724 810.971,213.724 810.971,155.918 
+	799.333,155.918 "
+            />
+          </a>
         </svg>
+        <div class="image_map__cloud">
+          <p id="image_map__number"></p>
+          <p id="image_map__status"></p>
+        </div>
       </div>
-      <table class="main-table">
+      <table class="main-table shadow_container">
         <thead>
           <tr class="main-table__header">
             <th>Dom</th>
@@ -273,7 +296,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="main-table__row" data-house-number="A1">
             <td>A1</td>
             <td>297 m2</td>
             <td>124 m2</td>
@@ -281,7 +304,7 @@
             <td>Wolny</td>
             <td><a href="" target="_blank">PDF</a></td>
           </tr>
-          <tr>
+          <tr class="main-table__row" data-house-number="A2">
             <td>A2</td>
             <td>297 m2</td>
             <td>124 m2</td>
@@ -289,7 +312,7 @@
             <td>Wolny</td>
             <td><a href="" target="_blank">PDF</a></td>
           </tr>
-          <tr>
+          <tr class="main-table__row" data-house-number="A3">
             <td>A3</td>
             <td>297 m2</td>
             <td>124 m2</td>
@@ -297,7 +320,7 @@
             <td>Wolny</td>
             <td><a href="" target="_blank">PDF</a></td>
           </tr>
-          <tr>
+          <tr class="main-table__row" data-house-number="B1">
             <td>B1</td>
             <td>356 m2</td>
             <td>147 m2</td>
@@ -305,18 +328,58 @@
             <td>Wolny</td>
             <td><a href="" target="_blank">PDF</a></td>
           </tr>
-          <tr>
+          <tr class="main-table__row" data-house-number="B2">
             <td>B2</td>
             <td>356 m2</td>
             <td>147 m2</td>
-            <td>580 m2</td>
+            <td>685 m2</td>
             <td>Wolny</td>
             <td><a href="" target="_blank">PDF</a></td>
           </tr>
         </tbody>
       </table>
     </section>
+    <a class="scroll__anchor" id="gallery__section"></a>
+    <section class="gallery__section container">
+      <h2 class="title">Galeria</h2>
+      <div class="gallery__container">
+        <div class="m-p-g">
+          <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+            <img
+              src="http://unsplash.it/600/400?image=198"
+              data-full="http://unsplash.it/1200/800?image=198"
+              class="m-p-g__thumbs-img"
+            />
+            <img
+              src="http://unsplash.it/600/400?image=198"
+              data-full="http://unsplash.it/1200/800?image=198"
+              class="m-p-g__thumbs-img"
+            />
+            <img
+              src="http://unsplash.it/600/400?image=198"
+              data-full="http://unsplash.it/1200/800?image=198"
+              class="m-p-g__thumbs-img"
+            />
+            <img
+              src="http://unsplash.it/600/400?image=198"
+              data-full="http://unsplash.it/1200/800?image=198"
+              class="m-p-g__thumbs-img"
+            />
+            <img
+              src="http://unsplash.it/600/400?image=198"
+              data-full="http://unsplash.it/1200/800?image=198"
+              class="m-p-g__thumbs-img"
+            />
+            <!-- Rest of your thumbnails... -->
+          </div>
 
+          <div class="m-p-g__fullscreen"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="title">Lokalizacja</h2>
+    </section>
     <!--
     <a class="scroll__anchor" id="info__section"></a>
     <section class="info__section container">

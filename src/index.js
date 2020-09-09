@@ -7,7 +7,6 @@ import '../node_modules/aos/dist/aos.css';
 
 $(document).ready(function() {
   AOS.init();
-  // GALLERY
 
   $('.jumbotron__slider').slick({
     infinite: true,
@@ -70,4 +69,31 @@ $(document).ready(function() {
       });
     });
   });
+
+  //REFACTOR ^^^^
+
+  const imageMap = {
+    mapItems: document.querySelectorAll('.image_map__item'),
+    tableRows: document.querySelectorAll('.main-table__row'),
+
+    setListeners: function() {
+      imageMap.mapItems.forEach(element => {
+        element.addEventListener('mousemove', e => {
+          console.log('jezdze :D');
+        });
+
+        element.addEventListener('mouseenter', e => {
+          this.tableRows.forEach(element => {
+            if (element.dataset.houseNumber === e.target.dataset.houseNumber) {
+            }
+          });
+        });
+      });
+    },
+
+    setCloudInfo: function() {},
+    readDataFromTable: function() {}
+  };
+
+  // imageMap.setListeners();
 });
