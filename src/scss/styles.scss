@@ -1,4 +1,4 @@
-@import './menu.css';
+@import '../css/menu.css';
 
 $breakpoint--tiny: 360px;
 $breakpoint--very-small: 480px;
@@ -54,6 +54,11 @@ html {
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 h2 {
@@ -114,7 +119,7 @@ a {
   cursor: pointer;
 
   &:hover {
-    color: #002349;
+    color: $gold;
   }
 }
 
@@ -126,7 +131,7 @@ a {
 }
 
 .text__highlighted {
-  color: #002349;
+  color: $navy-blue;
 }
 
 header {
@@ -143,7 +148,8 @@ header {
 }
 
 .header__scrolled {
-  background-color: #002349;
+  background-color: $navy-blue;
+  border-bottom: 1px solid $gold;
 }
 
 body {
@@ -154,6 +160,33 @@ body {
 
 .scroll__block {
   overflow: hidden;
+}
+
+.logo {
+  height: 52px;
+  fill: #fff;
+  transition: fill 0.3s;
+}
+
+.logo__mobile {
+  height: 40px;
+
+  &:hover {
+    .logo {
+      fill: $gold;
+    }
+  }
+}
+
+.logo__link {
+  display: block;
+  margin-top: 7px;
+
+  &:hover {
+    .logo {
+      fill: $gold;
+    }
+  }
 }
 
 .container {
@@ -532,12 +565,33 @@ button {
   }
 }
 
+.image_map_container {
+  display: flex;
+  justify-items: center;
+  padding: 30px;
+  background-color: #fff;
+  margin-bottom: 80px;
+}
+
+.image_map__item {
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.image_map {
+  width: 100%;
+  height: auto;
+}
+
 .main-table {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   border-collapse: collapse;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
   display: block;
 
   @include medium {
@@ -545,13 +599,18 @@ button {
   }
 
   @include very-large {
-    margin-bottom: 380px;
+    margin-bottom: 80px;
     font-size: 19px;
   }
 
   a {
-    color: black;
+    color: $gold;
     text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      color: $navy-blue;
+    }
   }
 
   th {
@@ -670,12 +729,12 @@ button {
     }
 
     &:hover {
-      background-color: rgba(153, 130, 93, 0.3);
+      background-color: rgba(0, 35, 73, 0.1);
     }
 
     &.main-table__highlighted {
       &:hover {
-        background-color: rgba(92, 225, 230, 0.2);
+        background-color: rgba(0, 35, 73, 0.2);
       }
     }
   }
@@ -699,6 +758,17 @@ button {
       display: table-row-group;
     }
   }
+}
+
+.gallery__section {
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
+}
+
+.gallery__title {
+  margin-bottom: 10px;
 }
 
 .info__section {
@@ -1034,9 +1104,13 @@ button {
 }
 
 .contact__facebook {
-  background-image: url('./assets/facebook.png');
+  background-image: url('../assets/facebook.png');
 }
 
 .contact__instagram {
-  background-image: url('./assets/instagram.png');
+  background-image: url('../assets/instagram.png');
 }
+
+// import
+
+@import './gallery.scss';
