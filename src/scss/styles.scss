@@ -1,4 +1,4 @@
-@import './menu.css';
+@import '../css/menu.css';
 
 $breakpoint--tiny: 360px;
 $breakpoint--very-small: 480px;
@@ -762,6 +762,13 @@ button {
 
 .gallery__section {
   background: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
+}
+
+.gallery__title {
+  margin-bottom: 10px;
 }
 
 .info__section {
@@ -1097,9 +1104,13 @@ button {
 }
 
 .contact__facebook {
-  background-image: url('./assets/facebook.png');
+  background-image: url('../assets/facebook.png');
 }
 
 .contact__instagram {
-  background-image: url('./assets/instagram.png');
+  background-image: url('../assets/instagram.png');
 }
+
+// import
+
+@import './gallery.scss';

@@ -1,9 +1,10 @@
 import $ from 'jquery';
-import '../node_modules/slick-carousel/slick/slick';
-import '../node_modules/slick-carousel/slick/slick.css';
-import '../node_modules/slick-carousel/slick/slick-theme.css';
-import AOS from '../node_modules/aos/dist/aos';
-import '../node_modules/aos/dist/aos.css';
+import '../../node_modules/slick-carousel/slick/slick';
+import '../../node_modules/slick-carousel/slick/slick.css';
+import '../../node_modules/slick-carousel/slick/slick-theme.css';
+import AOS from '../../node_modules/aos/dist/aos';
+import '../../node_modules/aos/dist/aos.css';
+import ImageGalleryCreator from './gallery';
 
 $(document).ready(function() {
   AOS.init();
@@ -96,4 +97,7 @@ $(document).ready(function() {
   };
 
   // imageMap.setListeners();
+
+  const photoGallery = new ImageGalleryCreator('photo_gallery');
+  photoGallery.init();
 });

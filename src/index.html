@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.scss" />
+    <link rel="stylesheet" href="./scss/styles.scss" />
     <!-- <link rel="shortcut icon" type="image/png" href="./assets/favi.png" /> -->
   </head>
   <header id="header">
@@ -341,40 +341,44 @@
     </section>
     <a class="scroll__anchor" id="gallery__section"></a>
     <section class="gallery__section container">
-      <h2 class="title">Galeria</h2>
-      <div class="gallery__container">
-        <div class="m-p-g">
-          <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
-            <img
-              src="http://unsplash.it/600/400?image=198"
-              data-full="http://unsplash.it/1200/800?image=198"
-              class="m-p-g__thumbs-img"
-            />
-            <img
-              src="http://unsplash.it/600/400?image=198"
-              data-full="http://unsplash.it/1200/800?image=198"
-              class="m-p-g__thumbs-img"
-            />
-            <img
-              src="http://unsplash.it/600/400?image=198"
-              data-full="http://unsplash.it/1200/800?image=198"
-              class="m-p-g__thumbs-img"
-            />
-            <img
-              src="http://unsplash.it/600/400?image=198"
-              data-full="http://unsplash.it/1200/800?image=198"
-              class="m-p-g__thumbs-img"
-            />
-            <img
-              src="http://unsplash.it/600/400?image=198"
-              data-full="http://unsplash.it/1200/800?image=198"
-              class="m-p-g__thumbs-img"
-            />
-            <!-- Rest of your thumbnails... -->
-          </div>
-
-          <div class="m-p-g__fullscreen"></div>
-        </div>
+      <h2 class="title gallery__title">Galeria</h2>
+      <div class="gallery__container photo_gallery__container" id="photo_gallery__container">
+        <img
+        class="gallery__photo photo_gallery__photo"
+        src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-6.jpg"
+        alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-5.jpg"
+          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-4.jpg"
+          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-3.jpg"
+          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-2.jpg"
+          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-1.jpg"
+          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+        />
+      </div>
+      <div class="gallery__popup photo_gallery__popup" id="photo_gallery__popup">
+        <span id="photo_gallery__popup_exit" class="gallery__popup_exit photo_gallery__popup_exit">&#10006;</span>
+        <button class="gallery__popup_button prev_button photo_gallery__prev_button" id="photo_gallery__popup_prev_button">&#10092</button>
+            <button class="gallery__popup_button next_button photo_gallery__next_button" id="photo_gallery__popup_next_button">&#10093</button>
+        <img id='photo_gallery__popup_img' class="gallery__popup_img photo_gallery__popup_img" src=""/>
       </div>
     </section>
     <section>
@@ -498,5 +502,5 @@
       </div>
     </section> -->
   </body>
-  <script src="./index.js"></script>
+  <script src="./js/index.js"></script>
 </html>
