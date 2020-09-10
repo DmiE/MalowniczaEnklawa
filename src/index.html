@@ -14,6 +14,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./scss/styles.scss" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaeHe1qkIOMjKr3sARyuBu9IXfItMvlI0&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
   </head>
   <body>
     <header id="header">
@@ -217,10 +221,9 @@
         >
           <image
             overflow="visible"
-            width="1349"
-            height="804"
             xlink:href="./assets/map.png"
             transform="matrix(0.8006 0 0 0.8006 -4.882813e-004 0)"
+            class="image_map__photo"
           />
           <a xlink:href="./assets/map.png" target="_blank">
             <polygon
@@ -389,6 +392,28 @@
         </button>
       </div>
     </section>
+    <section class="localtion__section">
+      <div class="title_container container shadow_container"><h2 class="title">Lokalizacja</h2></div>
+      <div class="location__container container shadow_container">
+        <div class="googleMap" id="googleMap"></div>
+      </div>
+    </section>
   </body>
   <script src="./js/index.js"></script>
+  <script>
+    let map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('googleMap'), {
+        center: { lat: 50.071117, lng: 19.851077 },
+        zoom: 13,
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: true
+      });
+      const marker = new google.maps.Marker({ position: { lat: 50.071117, lng: 19.851077 }, map: map });
+    }
+  </script>
 </html>
