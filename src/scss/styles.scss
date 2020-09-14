@@ -537,8 +537,7 @@ button {
 }
 
 .image_map_container {
-  display: flex;
-  justify-items: center;
+  display: block;
   padding: 30px;
   background-color: #fff;
   margin-bottom: 80px;
@@ -558,8 +557,7 @@ button {
 }
 
 .image_map__photo {
-  min-width: 100%;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
