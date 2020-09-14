@@ -36,6 +36,7 @@ export default class ImageGalleryCreator {
     this.popupImg.src = element.src;
     this.galleryPopup.classList.add('visible');
     this.galleryPopup.classList.add('show');
+    document.querySelector('html').classList.add('scroll__block');
   };
 
   setActiveNumber = function(element) {
@@ -69,6 +70,7 @@ export default class ImageGalleryCreator {
   closePopup = function() {
     this.galleryPopup.classList.remove('show');
     this.galleryPopup.classList.remove('visible');
+    document.querySelector('html').classList.remove('scroll__block');
   };
 
   init = function() {

@@ -14,6 +14,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./scss/styles.scss" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaeHe1qkIOMjKr3sARyuBu9IXfItMvlI0&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
   </head>
   <body>
     <header id="header">
@@ -61,7 +65,6 @@
           <li class="navigation__item"><a href="#description__section">O INWESTYCJI</a></li>
           <li class="navigation__item"><a href="#image-map__section">WYBÓR DOMÓW</a></li>
           <li class="navigation__item"><a href="#gallery__section">GALERIA</a></li>
-          <li class="navigation__item"><a href="#info__section">STANDARD</a></li>
           <li class="navigation__item"><a href="#map__section">LOKALIZACJA</a></li>
           <li class="navigation__item"><a href="#contact__section">KONTAKT</a></li>
           <li class="navigation__item navigation__social-icon">
@@ -119,7 +122,6 @@
         <li class="mobile-navigation__item"><a href="#description__section">O INWESTYCJI</a></li>
         <li class="mobile-navigation__item"><a href="#image-map__section">WYBÓR DOMÓW</a></li>
         <li class="mobile-navigation__item"><a href="#gallery__section">GALERIA</a></li>
-        <li class="mobile-navigation__item"><a href="#info__section">STANDARD</a></li>
         <li class="mobile-navigation__item"><a href="#map__section">LOKALIZACJA</a></li>
         <li class="mobile-navigation__item"><a href="#contact__section">KONTAKT</a></li>
       </ul>
@@ -199,10 +201,10 @@
     </section>
     <a class="scroll__anchor" id="map__section"></a>
     <section class="table__section container">
-      <div class="title_container container shadow_container">
+      <div class="title_container shadow_container">
         <h2 class="title">Wybór domu</h2>
       </div>
-      <div class="image_map_container container shadow_container">
+      <div class="image_map_container shadow_container">
         <svg
           version="1.1"
           id="Warstwa_1"
@@ -215,13 +217,7 @@
           xml:space="preserve"
           class="image_map"
         >
-          <image
-            overflow="visible"
-            width="1349"
-            height="804"
-            xlink:href="./assets/map.png"
-            transform="matrix(0.8006 0 0 0.8006 -4.882813e-004 0)"
-          />
+          <image xlink:href="./assets/map.png" class="image_map__photo" />
           <a xlink:href="./assets/map.png" target="_blank">
             <polygon
               opacity="0.1"
@@ -337,38 +333,38 @@
       </table>
     </section>
     <a class="scroll__anchor" id="gallery__section"></a>
-    <section class="gallery__section container">
+    <section class="gallery__section container shadow_container">
       <h2 class="title gallery__title">Galeria</h2>
       <div class="gallery__container photo_gallery__container" id="photo_gallery__container">
         <img
           class="gallery__photo photo_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-6.jpg"
-          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Domy od strony dużego zielonego ogrodu z tarasem."
         />
         <img
           class="gallery__photo photo_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-5.jpg"
-          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom od strony garażu z podjazdem i ogrodzeniem"
         />
         <img
           class="gallery__photo photo_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-4.jpg"
-          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom od strony garażu z podjazdem i ogrodzeniem"
         />
         <img
           class="gallery__photo photo_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-3.jpg"
-          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Domy widziane z lotu ptaka, widoczne ogrody oraz podjazd."
         />
         <img
           class="gallery__photo photo_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-2.jpg"
-          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa."
         />
         <img
           class="gallery__photo photo_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-1.jpg"
-          alt="wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom widziany od strony dużego zielonego ogrodu z basenem."
         />
       </div>
 
@@ -389,6 +385,28 @@
         </button>
       </div>
     </section>
+    <section class="localtion__section">
+      <div class="title_container container shadow_container"><h2 class="title">Lokalizacja</h2></div>
+      <div class="location__container container shadow_container">
+        <div class="googleMap" id="googleMap"></div>
+      </div>
+    </section>
   </body>
   <script src="./js/index.js"></script>
+  <script>
+    let map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('googleMap'), {
+        center: { lat: 50.071117, lng: 19.851077 },
+        zoom: 13,
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: true
+      });
+      const marker = new google.maps.Marker({ position: { lat: 50.071117, lng: 19.851077 }, map: map });
+    }
+  </script>
 </html>
