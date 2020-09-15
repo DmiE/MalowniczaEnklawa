@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/parcel src/index.html --no-cache",
     "deploy": "./node_modules/.bin/parcel build src/index.html --public-url ./ -d ./docs",
+    "bld": "./node_modules/.bin/parcel build src/index.html --public-url ./ -d ./dist",
     "build": "npm run format && npm run lint && ./node_modules/.bin/parcel build src/index.html --public-url ./ -d ./dist",
     "format": "./node_modules/.bin/prettier --write './src/**/*.{html,scss,js}'",
     "lint": "./node_modules/.bin/eslint './src/**/*.js'",

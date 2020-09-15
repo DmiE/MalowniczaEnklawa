@@ -50,12 +50,12 @@ if (!empty($errors)) {
     $mail->SMTPSecure = 'ssl'; 
     $mail->Port = 465; //port poczty
     $mail->SetLanguage("pl", "phpmailer/language/");
-    $mail->Subject = "CVSite message"; //temat wiadomości
+    $mail->Subject = $topic; //temat wiadomości
     $mail->Body = 'Wiadomość od : ' . $name . ' ' . $email . ',
     Temat: ' . $topic . ',
     Treść wiadomości: ' . $message . '.'; //wiadomość
     $mail->AddAddress("dmiecvsite@gmail.com", "Dawid Mieszczak"); //do kogo ma być wysłana
-    $mail->AddReplyTo($email, 'Reply to name');
+    $mail->AddReplyTo($email, $name);
 
     if($mail->send()){
         // header('Location: thank-you.html'); // redirect to 'thank you' page

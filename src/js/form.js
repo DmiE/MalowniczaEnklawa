@@ -8,6 +8,7 @@ const textErrorMessage = document.getElementById('text_error_message');
 const finalSuccessMsg = document.getElementById('contact_form__final_success_message');
 const finalErrorMsg = document.getElementById('contact_form__final_error_message');
 const submitButton = document.getElementById('contact_form__submit_button');
+const topicField = document.getElementById('topic');
 const nameField = document.getElementById('name');
 const nameErrorMessage = document.getElementById('name_error_message');
 const checkboxInput = document.getElementById('regulations');
@@ -111,8 +112,8 @@ form.addEventListener('submit', event => {
 
     dataToSend.append('email', email.value);
     dataToSend.append('message', textMessage.value);
-    dataToSend.append('topic', topic.value);
-    dataToSend.append('name', name.value);
+    dataToSend.append('topic', topicField.value);
+    dataToSend.append('name', nameField.value);
 
     axios({
       method: 'post',

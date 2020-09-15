@@ -80,8 +80,8 @@ strong {
 }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
@@ -868,6 +868,12 @@ button {
   &:hover {
     background-color: rgba($color: $gold, $alpha: 0.6);
   }
+
+  &:disabled {
+    background-color: rgba($color: #eee, $alpha: 0.2);
+    opacity: 0.5;
+    cursor: wait;
+  }
 }
 
 .contact_form__checkbox_container {
@@ -895,6 +901,45 @@ button {
   align-items: center;
 }
 
+.contact_info__section {
+  padding: 70px 0;
+  border-top: 1px solid $gold;
+}
+
+.contact_info__container {
+  padding: 50px 5px;
+  background: #fff;
+
+  @include medium {
+    padding: 50px 20px;
+  }
+}
+
+.contact_info__title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.contact_info__text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+
+  @include medium {
+    font-size: 20px;
+  }
+}
+
+.footer {
+  height: 92px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $navy-blue;
+  border-top: 1px solid $gold;
+}
 // import
 
 @import './gallery.scss';

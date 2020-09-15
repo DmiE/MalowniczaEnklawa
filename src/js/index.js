@@ -61,26 +61,54 @@ $(document).ready(function() {
     });
   });
   // //REFACTOR ^^^^
-  const imageMap = {
-    mapItems: document.querySelectorAll('.image_map__item'),
-    tableRows: document.querySelectorAll('.main-table__row'),
-    setListeners: function() {
-      imageMap.mapItems.forEach(element => {
-        element.addEventListener('mousemove', e => {
-          console.log('jezdze :D');
-        });
-        element.addEventListener('mouseenter', e => {
-          this.tableRows.forEach(element => {
-            if (element.dataset.houseNumber === e.target.dataset.houseNumber) {
-            }
-          });
-        });
-      });
-    },
-    setCloudInfo: function() {},
-    readDataFromTable: function() {}
-  };
-  imageMap.setListeners();
+  // const imageMap = {
+  //   mapItems: document.querySelectorAll('.image_map__item'),
+  //   tableRows: document.querySelectorAll('.main-table__row'),
+  //   setListeners: function() {
+  //     imageMap.mapItems.forEach(element => {
+  //       element.addEventListener('mousemove', e => {
+  //         console.log('jezdze :D');
+  //       });
+  //       element.addEventListener('mouseenter', e => {
+  //         this.tableRows.forEach(element => {
+  //           if (element.dataset.houseNumber === e.target.dataset.houseNumber) {
+  //           }
+  //         });
+  //       });
+  //     });
+  //   },
+  //   setCloudInfo: function() {},
+  //   readDataFromTable: function() {}
+  // };
+  // imageMap.setListeners();
+
+  // ---- PHOTO GALLERY ----
+
   const photoGallery = new ImageGalleryCreator('photo_gallery');
   photoGallery.init();
+
+  // ---- GOOGLE MAPS ----
+
+  // Create the script tag, set the appropriate attributes
+  var script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBaeHe1qkIOMjKr3sARyuBu9IXfItMvlI0&callback=initMap';
+  script.defer = true;
+
+  // Attach your callback function to the `window` object
+  window.initMap = function() {
+    const map = new google.maps.Map(document.getElementById('googleMap'), {
+      center: { lat: 50.071117, lng: 19.851077 },
+      zoom: 13,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: true
+    });
+    const marker = new google.maps.Marker({ position: { lat: 50.071117, lng: 19.851077 }, map: map });
+  };
+
+  // Append the 'script' element to 'head'
+  document.head.appendChild(script);
 });
