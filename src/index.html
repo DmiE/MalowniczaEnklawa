@@ -391,6 +391,45 @@
         <div class="googleMap" id="googleMap"></div>
       </div>
     </section>
+    <section class="contact__section">
+      <div class="title_container container shadow_container"><h2 class="title">Kontakt</h2></div>
+      <div class="contact__container">
+        <div class="form__container container">
+          <form class="contact_form" novalidate id="contact_form">
+            <div class="contact_form__cell">
+              <label for="name" class="contact_form__label">Imię i Nazwisko</label>
+              <input class="contact_form__input" type="text" name="name" id="name" placeholder="Imię i Nazwisko" />
+              <p class="contact_form__error_message" id="name_error_message"></p>
+            </div>
+            <div class="contact_form__cell">
+              <label for="email" class="contact_form__label">Adres e-mail</label>
+              <input class="contact_form__input" type="email" name="email" id="email" placeholder="Adres e-mail" />
+              <p class="contact_form__error_message" id="email_error_message"></p>
+            </div>
+            <div class="contact_form__cell">
+              <label for="topic" class="contact_form__label">Temat</label>
+              <input class="contact_form__input" type="text" name="topic" id="topic" placeholder="Temat" />
+              <p class="contact_form__error_message" id="topic_error_message"></p>
+            </div>
+            <div class="contact_form__cell">
+              <label for="message" class="contact_form__label">Wiadomość</label>
+              <textarea class="contact_form__textarea" name="message" id="message" placeholder="Wiadomość"></textarea>
+              <p class="contact_form__error_message" id="text_error_message"></p>
+            </div>
+            <div class="contact_form__checkbox_container">
+              <input type="checkbox" id="regulations" name="regulations" class="contact_form__checkobox" />
+              <label class="contact_form__label contact_form__checkbox_label" for="regulations"
+                >Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych i
+                regulaminem. <a>Regulamin</a></label
+              >
+            </div>
+            <button class="contact_form__button" id="contact_form__submit_button">
+              Wyślij
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </body>
   <script src="./js/index.js"></script>
   <script>

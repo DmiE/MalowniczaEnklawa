@@ -746,346 +746,6 @@ button {
   margin-bottom: 10px;
 }
 
-.info__section {
-  display: flex;
-  flex-direction: column;
-}
-
-.info__ext-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.info__box {
-  height: 230px;
-  width: 230px;
-  max-width: 100%;
-  background-color: #5ce1e6;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 35px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
-  &:hover {
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);
-  }
-}
-
-.info__title {
-  margin: auto;
-  font-size: 21px;
-}
-
-.info__container {
-  width: 100%;
-
-  @include small {
-    width: 50%;
-  }
-
-  @include large {
-    width: 33%;
-  }
-}
-
-.info__text {
-  text-align: center;
-  margin-bottom: 55px;
-  max-width: 350px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
-}
-
-.contact__section {
-  margin-top: 150px;
-
-  @include very-large {
-    margin-top: 282px;
-  }
-}
-
-.contact__title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 35px;
-
-  @include very-small {
-    margin-bottom: 60px;
-  }
-
-  @include large {
-    margin-bottom: 95px;
-  }
-}
-
-.contact__section-title {
-  font-size: 42px;
-}
-
-.contact__line {
-  width: 207px;
-  border-top: 11px solid black;
-}
-
-.contact__container {
-  display: flex;
-  flex-direction: column-reverse;
-  // justify-content: space-between; ustawienie gdy dodany formularz kontaktowy
-
-  @include large {
-    display: flex;
-    flex-direction: row;
-    // justify-content: space-between; ustawienie gdy dodany formularz kontaktowy
-    justify-content: center;
-  }
-}
-
-.contact__form-container {
-  max-width: 750px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  @include large {
-    width: 60%;
-  }
-
-  @include very-large {
-    width: 100%;
-  }
-}
-
-.contact__info {
-  margin-bottom: 60px;
-
-  @include large {
-    margin-bottom: 0;
-  }
-}
-
-.contact__form-input {
-  height: 58px;
-  width: 100%;
-  border: none;
-  margin-bottom: 23px;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding-top: 1px;
-  padding-left: 30px;
-  padding-right: 30px;
-  line-height: 23px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 19px;
-  color: #9b9b9b;
-
-  &.error {
-    background-color: rgba($color: #b30808, $alpha: 0.3);
-    color: #b30808;
-
-    &::placeholder {
-      color: #b30808;
-      opacity: 1;
-    }
-
-    &:-ms-input-placeholder {
-      color: #b30808;
-    }
-
-    &::-ms-input-placeholder {
-      color: #b30808;
-    }
-  }
-}
-
-.contact__form-textarea {
-  height: 390px;
-  width: 100%;
-  border: none;
-  margin-bottom: 23px;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 27px 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 19px;
-  color: #9b9b9b;
-  resize: none;
-
-  &.error {
-    background-color: rgba($color: #b30808, $alpha: 0.3);
-    color: #b30808;
-
-    &::placeholder {
-      color: #b30808;
-      opacity: 1;
-    }
-
-    &:-ms-input-placeholder {
-      color: #b30808;
-    }
-
-    &::-ms-input-placeholder {
-      color: #b30808;
-    }
-  }
-}
-
-.checkbox_container {
-  padding-left: 10px;
-
-  a {
-    color: #5ce1e6;
-  }
-
-  .styled_checkbox {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    color: #78787a;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  .styled_checkbox input {
-    position: absolute;
-    opacity: 1;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    display: none;
-  }
-
-  .checkmark {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    border-radius: 2px;
-    height: 14px;
-    width: 14px;
-    box-shadow: 0px 0px 0px 1px #72e9ed;
-    border: solid white 1px;
-    background-color: #ffffff;
-  }
-
-  .styled_checkbox input:checked ~ .checkmark {
-    background-color: #5ce1e6;
-  }
-
-  &.error {
-    .styled_checkbox {
-      color: #b30808;
-    }
-
-    .checkmark {
-      border: solid #b30808 1px;
-      background-color: rgba($color: #b30808, $alpha: 0.3);
-    }
-  }
-}
-
-.contact__form-button {
-  height: 58px;
-  width: 100%;
-  border: none;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 19px;
-  background-color: #5ce1e6;
-
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
-}
-
-.contact__info-title {
-  font-size: 26px;
-  font-weight: 400;
-  margin-bottom: 20px;
-
-  @include very-small {
-    font-size: 32px;
-    margin-bottom: 50px;
-  }
-
-  @include large {
-    margin-top: 130px;
-  }
-}
-
-.contact__phone,
-.contact__mail {
-  font-size: 18px;
-  margin: 0;
-  line-height: 39px;
-  text-align: center;
-
-  @include very-small {
-    font-size: 32px;
-  }
-
-  @include large {
-    font-size: 26px;
-  }
-
-  @include very-large {
-    font-size: 32px;
-  }
-}
-
-.contact__social-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 50px;
-
-  @include very-small {
-    margin-top: 88px;
-  }
-}
-
-.contact__social-icon {
-  height: 30px;
-  width: 30px;
-  display: block;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 19px;
-
-  @include very-small {
-    height: 42px;
-    width: 42px;
-  }
-
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-.contact__facebook {
-  background-image: url('../assets/facebook.png');
-}
-
-.contact__instagram {
-  background-image: url('../assets/instagram.png');
-}
-
 .location__container {
   background: #fff;
   margin-top: 30px;
@@ -1094,6 +754,113 @@ button {
 .googleMap {
   width: 100%;
   height: 500px;
+  margin-bottom: 100px;
+}
+
+.contact__container {
+  background: url('../assets/malownicza-enklawa-wizualizacja-zewnetrzna-5.jpg');
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $navy-blue;
+    opacity: 0.9;
+    z-index: 1;
+  }
+}
+
+.form__container {
+  padding: 70px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.contact_form__cell {
+  width: 100%;
+  margin-bottom: 23px;
+  position: relative;
+}
+
+.contact_form__label {
+  display: block;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+
+.contact_form__checkbox_label {
+  display: inline;
+
+  a {
+    color: $gold;
+  }
+}
+
+.contact_form__input {
+  background: none;
+  border: 1px solid #eee;
+  width: 100%;
+  height: 40px;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 15px;
+  outline: none;
+
+  &::placeholder {
+    color: #eee;
+    opacity: 0.2;
+  }
+}
+
+.contact_form__textarea {
+  background: none;
+  border: 1px solid #eee;
+  width: 100%;
+  min-height: 200px;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  outline: none;
+  resize: none;
+  scrollbar-width: thin;
+
+  &::placeholder {
+    color: #eee;
+    opacity: 0.2;
+  }
+}
+
+.contact_form__button {
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+  display: block;
+  background-color: rgba($color: #eee, $alpha: 0.2);
+  border: 1px solid #eee;
+  height: 60px;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba($color: $gold, $alpha: 0.6);
+  }
+}
+
+.contact_form__checkbox_container {
+  margin-bottom: 30px;
 }
 
 // import
