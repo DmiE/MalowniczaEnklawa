@@ -5,6 +5,7 @@ import '../../node_modules/slick-carousel/slick/slick-theme.css';
 import AOS from '../../node_modules/aos/dist/aos';
 import '../../node_modules/aos/dist/aos.css';
 import ImageGalleryCreator from './gallery';
+import './form';
 
 $(document).ready(function() {
   // AOS.init();

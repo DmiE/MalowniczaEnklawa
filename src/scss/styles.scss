@@ -782,7 +782,7 @@ button {
 
 .contact_form__cell {
   width: 100%;
-  margin-bottom: 23px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -813,6 +813,12 @@ button {
   font-weight: 400;
   font-size: 15px;
   outline: none;
+  margin-bottom: 3px;
+
+  &.error {
+    color: red;
+    border: 1px solid red;
+  }
 
   &::placeholder {
     color: #eee;
@@ -833,6 +839,11 @@ button {
   outline: none;
   resize: none;
   scrollbar-width: thin;
+
+  &.error {
+    color: red;
+    border: 1px solid red;
+  }
 
   &::placeholder {
     color: #eee;
@@ -861,6 +872,27 @@ button {
 
 .contact_form__checkbox_container {
   margin-bottom: 30px;
+  position: relative;
+}
+
+.contact_form__error_message {
+  color: red;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  bottom: -20px;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.contact_form__status_message {
+  color: #eee;
+  text-align: center;
+  min-height: 400px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 // import

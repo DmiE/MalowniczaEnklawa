@@ -10,7 +10,7 @@
     />
     <title>Malownicza Enklawa</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./scss/styles.scss" />
@@ -417,16 +417,24 @@
               <p class="contact_form__error_message" id="text_error_message"></p>
             </div>
             <div class="contact_form__checkbox_container">
-              <input type="checkbox" id="regulations" name="regulations" class="contact_form__checkobox" />
+              <input type="checkbox" id="regulations" name="regulations" class="contact_form__checkobox" checked />
               <label class="contact_form__label contact_form__checkbox_label" for="regulations"
                 >Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych i
                 regulaminem. <a>Regulamin</a></label
               >
+              <p class="contact_form__error_message" id="checkbox_error_message"></p>
             </div>
             <button class="contact_form__button" id="contact_form__submit_button">
               Wyślij
             </button>
           </form>
+          <div class="contact_form__status_message" id="contact_form__final_success_message">
+            <p>Dziękujemy za wiadomość.</p>
+          </div>
+          <div class="contact_form__status_message" id="contact_form__final_error_message">
+            <p>Coś poszło nie tak,</p>
+            <p>proszę spróbować później!</p>
+          </div>
         </div>
       </div>
     </section>
