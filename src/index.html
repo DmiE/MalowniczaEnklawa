@@ -8,12 +8,14 @@
       name="description"
       content="Malownicza Enklawa to prywatna enklawa 5 domów jednorodzinnych znajdujących w najbardziej malowniczym zakątku Woli Justowskiej w Krakowie"
     />
+
     <title>Malownicza Enklawa</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./scss/styles.scss" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
   </head>
   <body>
     <header id="header">
@@ -204,7 +206,7 @@
       <div class="title_container shadow_container">
         <h2 class="title">Wybór domu</h2>
       </div>
-      <div class="image_map_container shadow_container">
+      <div class="image_map_container shadow_container" id="image_map__container">
         <svg
           version="1.1"
           id="Warstwa_1"
@@ -217,11 +219,17 @@
           xml:space="preserve"
           class="image_map"
         >
-          <image xlink:href="./assets/map.png" class="image_map__photo" />
+          <image
+            overflow="visible"
+            width="1080"
+            height="643.677"
+            xlink:href="./assets/map.png"
+            class="image_map__photo"
+          ></image>
           <a xlink:href="./assets/rzutB.pdf" target="_blank">
             <polygon
               opacity="0.1"
-              class="image_map__item"
+              class="image_map__item image_map__item__sold"
               data-house-number="B1"
               fill="#FFFFFF"
               points="144.192,58.427 273.211,58.427 273.211,103.109 322.641,103.109 322.641,198.337 
@@ -272,9 +280,9 @@
             />
           </a>
         </svg>
-        <div class="image_map__cloud">
-          <p id="image_map__number"></p>
-          <p id="image_map__status"></p>
+        <div class="image_map__cloud" id="image_map__cloud">
+          <p><b>Dom: </b><span id="image_map_cloud__number"></span></p>
+          <p><b>Status: </b><span id="image_map_cloud__status"></span></p>
         </div>
       </div>
       <table class="main-table shadow_container">
@@ -313,12 +321,12 @@
             <td>Wolny</td>
             <td><a href="./assets/rzutA.pdf" target="_blank">PDF</a></td>
           </tr>
-          <tr class="main-table__row" data-house-number="B1">
+          <tr class="main-table__row sold" data-house-number="B1">
             <td>B1</td>
             <td>356 m2</td>
             <td>147 m2</td>
             <td>730 m2</td>
-            <td>Wolny</td>
+            <td>Sprzedany</td>
             <td><a href="./assets/rzutB.pdf" target="_blank">PDF</a></td>
           </tr>
           <tr class="main-table__row" data-house-number="B2">
@@ -335,35 +343,80 @@
     <a class="scroll__anchor" id="gallery__section"></a>
     <section class="gallery__section container shadow_container">
       <h2 class="title gallery__title">Galeria</h2>
-      <div class="gallery__container photo_gallery__container" id="photo_gallery__container">
+      <h3>Wizualizacje</h3>
+      <div class="gallery__container viz_gallery__container" id="viz_gallery__container">
         <img
-          class="gallery__photo photo_gallery__photo"
+          class="gallery__photo viz_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-6.jpg"
           alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Domy od strony dużego zielonego ogrodu z tarasem."
         />
         <img
-          class="gallery__photo photo_gallery__photo"
+          class="gallery__photo viz_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-5.jpg"
           alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom od strony garażu z podjazdem i ogrodzeniem"
         />
         <img
-          class="gallery__photo photo_gallery__photo"
+          class="gallery__photo viz_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-4.jpg"
           alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom od strony garażu z podjazdem i ogrodzeniem"
         />
         <img
-          class="gallery__photo photo_gallery__photo"
+          class="gallery__photo viz_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-3.jpg"
           alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Domy widziane z lotu ptaka, widoczne ogrody oraz podjazd."
         />
         <img
-          class="gallery__photo photo_gallery__photo"
+          class="gallery__photo viz_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-2.jpg"
           alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa."
         />
         <img
-          class="gallery__photo photo_gallery__photo"
+          class="gallery__photo viz_gallery__photo"
           src="./assets/malownicza-enklawa-wizualizacja-zewnetrzna-1.jpg"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom widziany od strony dużego zielonego ogrodu z basenem."
+        />
+      </div>
+
+      <div class="gallery__popup viz_gallery__popup" id="viz_gallery__popup">
+        <img id="viz_gallery__popup_img" class="gallery__popup_img viz_gallery__popup_img" src="" />
+        <span id="viz_gallery__popup_exit" class="gallery__popup_exit viz_gallery__popup_exit">&#10006;</span>
+        <button class="gallery__popup_button prev_button viz_gallery__prev_button" id="viz_gallery__popup_prev_button">
+          &#10092;
+        </button>
+        <button class="gallery__popup_button next_button viz_gallery__next_button" id="viz_gallery__popup_next_button">
+          &#10093;
+        </button>
+      </div>
+      <h3>Zdjęcia</h3>
+      <div class="gallery__container photo_gallery__container" id="photo_gallery__container">
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza enklawa zdjęcie 1.jpg"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Domy od strony dużego zielonego ogrodu z tarasem."
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza enklawa zdjęcie 2.jpg"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom od strony garażu z podjazdem i ogrodzeniem"
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza enklawa zdjęcie 3.jpg"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom od strony garażu z podjazdem i ogrodzeniem"
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza enklawa zdjęcie 4.jpg"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Domy widziane z lotu ptaka, widoczne ogrody oraz podjazd."
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza enklawa zdjęcie 5.jpg"
+          alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa."
+        />
+        <img
+          class="gallery__photo photo_gallery__photo"
+          src="./assets/malownicza enklawa zdjęcie 6.jpg"
           alt="Wizualizacja przedstawiająca wygląd zewnętrzny domów inwestycji Malownicza Enklawa. Dom widziany od strony dużego zielonego ogrodu z basenem."
         />
       </div>

@@ -9,6 +9,7 @@ import './form';
 
 $(document).ready(function() {
   // AOS.init();
+  // JUMBOTRON SLIDER
   $('.jumbotron__slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -61,29 +62,58 @@ $(document).ready(function() {
     });
   });
   // //REFACTOR ^^^^
-  // const imageMap = {
-  //   mapItems: document.querySelectorAll('.image_map__item'),
-  //   tableRows: document.querySelectorAll('.main-table__row'),
-  //   setListeners: function() {
-  //     imageMap.mapItems.forEach(element => {
-  //       element.addEventListener('mousemove', e => {
-  //         console.log('jezdze :D');
-  //       });
-  //       element.addEventListener('mouseenter', e => {
-  //         this.tableRows.forEach(element => {
-  //           if (element.dataset.houseNumber === e.target.dataset.houseNumber) {
-  //           }
-  //         });
-  //       });
-  //     });
-  //   },
-  //   setCloudInfo: function() {},
-  //   readDataFromTable: function() {}
-  // };
-  // imageMap.setListeners();
+  const imageMap = {
+    mapItems: document.querySelectorAll('.image_map__item'),
+    tableRows: document.querySelectorAll('.main-table__row'),
+    cloudHouseNumber: document.getElementById('image_map_cloud__number'),
+    cloudHouseStatus: document.getElementById('image_map_cloud__status'),
+    cloud: document.getElementById('image_map__cloud'),
+    imageMapContainer: document.getElementById('image_map__container'),
+    currentHouseNumber: null,
+    currentHouseStatus: null,
+
+    setListeners: function() {
+      imageMap.mapItems.forEach(element => {
+        element.addEventListener('mousemove', e => {
+          this.setCloudPosition(e);
+        });
+        element.addEventListener('mouseenter', e => {
+          this.readAndSetDataFromTable(e.target.dataset.houseNumber);
+          this.setCloudInfo();
+          this.cloud.classList.add('active');
+        });
+        element.addEventListener('mouseleave', e => {
+          this.cloud.classList.remove('active');
+        });
+      });
+    },
+
+    setCloudInfo: function() {
+      this.cloudHouseNumber.innerText = this.currentHouseNumber;
+      this.cloudHouseStatus.innerText = this.currentHouseStatus;
+    },
+
+    readAndSetDataFromTable: function(houseNumber) {
+      this.tableRows.forEach(element => {
+        if (element.dataset.houseNumber === houseNumber) {
+          this.currentHouseNumber = houseNumber;
+          this.currentHouseStatus = element.children[4].innerText;
+        }
+      });
+    },
+
+    setCloudPosition: function(e) {
+      const parentPosition = this.imageMapContainer.getBoundingClientRect();
+      this.cloud.style.top = e.clientY - parentPosition.top - 80 + 'px';
+      this.cloud.style.left = e.clientX - parentPosition.left + 20 + 'px';
+    }
+  };
+  imageMap.setListeners();
 
   // ---- PHOTO GALLERY ----
 
+  const vizGallery = new ImageGalleryCreator('viz_gallery');
+  vizGallery.init();
   const photoGallery = new ImageGalleryCreator('photo_gallery');
   photoGallery.init();
 
@@ -106,7 +136,10 @@ $(document).ready(function() {
       rotateControl: false,
       fullscreenControl: true
     });
-    const marker = new google.maps.Marker({ position: { lat: 50.071117, lng: 19.851077 }, map: map });
+    const marker = new google.maps.Marker({
+      position: { lat: 50.071117, lng: 19.851077 },
+      map: map
+    });
   };
 
   // Append the 'script' element to 'head'
