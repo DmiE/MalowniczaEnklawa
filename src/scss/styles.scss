@@ -545,11 +545,14 @@ button {
 
   @include medium {
     font-size: 18px;
+    line-height: 27px;
+    margin-top: 7px;
   }
 
   @include very-large {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 29px;
+    margin-top: 9px;
   }
 }
 
