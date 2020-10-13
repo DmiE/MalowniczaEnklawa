@@ -9,6 +9,8 @@
       content="Malownicza Enklawa to prywatna enklawa 4 domów jednorodzinnych znajdujących w najbardziej malowniczym zakątku Woli Justowskiej w Krakowie. Domy położone są na wzgórzu z pięknymi widokami na Kraków oraz okolicę."
     />
     <title>Malownicza Enklawa</title>
+    <link rel="stylesheet" href="../node_modules/photo-sphere-viewer/dist/photo-sphere-viewer.css" />
+    <link rel="stylesheet" href="../node_modules/photo-sphere-viewer/dist/plugins/markers.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap"
       rel="stylesheet"
@@ -454,6 +456,10 @@
         </button>
       </div>
     </section>
+    <section class="pano__section">
+      <div class="title_container container shadow_container"><h2 class="title">Panorama</h2></div>
+      <div class="pano__container container" id="malownicza-pano"></div>
+    </section>
     <a class="scroll__anchor" id="location__section"></a>
     <section class="localtion__section">
       <div class="title_container container shadow_container"><h2 class="title">Lokalizacja</h2></div>
@@ -563,4 +569,5 @@
     </footer>
   </body>
   <script src="./js/index.js"></script>
+  <script src="./js/malownicza.js"></script>
 </html>

@@ -145,7 +145,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 200;
   transition: background-color 0.4s;
 
   -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
@@ -284,7 +284,7 @@ body {
   align-items: center;
   margin: 0;
   padding-left: 0;
-  z-index: 10;
+  z-index: 100;
   transform: translateX(100%);
   transition: transform 0.4s;
 
@@ -807,6 +807,26 @@ button {
 .gallery__subtitle {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.pano__section {
+  margin-bottom: 50px;
+
+  @include large {
+    margin-bottom: 100px;
+  }
+}
+
+.pano__container {
+  height: 300px;
+
+  @include medium {
+    height: 400px;
+  }
+
+  @include large {
+    height: 600px;
+  }
 }
 
 .location__container {
